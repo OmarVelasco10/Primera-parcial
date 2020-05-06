@@ -11,6 +11,14 @@ class Alumno{
       return "Nombre: " + this.nombre + " Edad: " + 
       this.edad + "Con numero de control: " + this.numControl;
     }
+    //Este método sirve para que cada estudiante nos diga su promedio
+    promedio(){
+        let suma=0;
+        for(let i=0;i<5;i++)
+            suma+=calificaciones[i];
+        return suma/5;
+    }
+    
     calificacion(){
       for(i=0;i<total;i++){
         if(promedios[i]>mayor){
@@ -67,10 +75,24 @@ class Alumno{
         resultado += temp.mostrar() + " , ";
         temp=temp.siguiente;
       }
+      console.log(resultado);
       return resultado;
+      
     }
-    console.log(resultado);
-  
+    
+    listarAlumnosPromedio(){  //regresar los estudiantes y su promedio
+        //debemos recorrer toda la lista para recuperar a los alumnos y su promedio
+        let temp=this.head;  //vamos por el inicio o head
+        let salida="";       //aqui pondremos la información que tengamos
+        while (temp!=null){  //mientras tengamos información vamos a ir sacando sus datos.
+            salida+= temp.nombre + " " + temp.promedio() + "\n";  //propiedad y el metodo del promedio
+            temp=temp.siguiente;
+        }
+        console.log(salida)
+        return salida;
+    }
+    //aqui iria encontrar el de mayor promedio
+    //encontrar el nombre del de mayor calificación MAT_2
   }
 
   //llenar datos
