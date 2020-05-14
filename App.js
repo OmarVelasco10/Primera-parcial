@@ -1,7 +1,7 @@
 const miInfoo=new Array();
 
 const btnAgregar = document.getElementById("btnAgregar");
-btnAgregar.addEventListener{"click", e =>{
+btnAgregar.addEventListener("click", e =>{   //tenias { en lugar de ( antes de "click
   let nombre=document.getElementById("txtNombre").value;
   let descripcion=document.getElementById("txtDescripcion").value;
   let cantidad=document.getElementById("txtCantidad").value;
