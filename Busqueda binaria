@@ -1,0 +1,34 @@
+/*Omar Velasco Guzmán 2C
+Busqueda Binaria*/
+
+var vector=[1,2,3,4,5];
+
+var inf,sup,mitad,dato;
+var band='F';
+
+dato=4;
+
+inf=0;
+sup=5;
+
+while(inf<=sup){
+    mitad=(sup+inf)/2;
+    if(vector[mitad]==dato){
+    band='V';
+    break;
+    }
+    if(vector[mitad>dato]){
+        sup=mitad;
+        mitad=(inf+sup)/2;
+    }
+    if(vector[mitad]<dato){
+        inf=mitad;
+        mitad=(inf+sup)/2;
+    }
+}
+if(band=='V'){
+    console.log("el numero fue encontrado en la posicion " + mitad);
+}
+else{
+    console.log("el numero no fue encontrado");
+}
