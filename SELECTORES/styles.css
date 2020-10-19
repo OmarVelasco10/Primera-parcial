@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding: 0;
+}
+/*Este es el selector universal,todo lo que hagamos o definamos aquí se le aplicara a todo los elementos
+ de nuestro sitio web*/
+
+h2{
+    color:red;
+}
+/*Este e sun selector de etiqueta,este sirve para hacer cambios a todos los elementos de un mismo tipo,
+en este caso los h2*/
+
+p spam{
+    font-size: 20px;
+    color:green;
+}
+/*En lo anterior podemos observar un selector descendente,esto quiere decir que se va a aplicar las propiedades 
+a un elemento en especifico que esta dentro de otro elemento en especifico,de esta manera,
+si hay 3 que cumplen con lo estipulado,se le aplicaran la spropiedades*/
+
+.prueba{
+    color:yellow;
+}
+/*Este es un selector de clase,sirve para hacer una modificación a todos los elementos que tengan la clase "prueba"*/
+
+#azul{
+    color:blueviolet;
+}
+/*El anterior es un selector via "id",sirve para hacer una modificación a un solo elemento en especicio,puesto que solo
+debe existir un "id",no debe de haber 2 iguales*/
+
+p .mezcla{
+    font-size: 20;
+    color:brown;
+}
+/*En este tipo de selector se mezclan 2 selectores,es como si nosotros dijeramos que se van a modificar los elementos de 
+la clase "mezcla" que esten dentro de un parrafo".Se dice que es una mezcla de selectores ya que las 2 son distintos tipos 
+de selectores.*/
+
+a[href="http://www.espn.com"]{
+    font-size: 20px;
+    color:blue;
+}
+/*Este es un selector un poco más avanzado,puesto que estamos diciendo que a los elementos "a" con ese link en especifico
+se les apliquen los estilos etipulados*/
+
+#container .articulo{
+    border:solid 1px #ccc;
+    padding: 10px;
+    width: 100px;
+
+    display: inline-block; /*hace la funcion de las otras 2 funciones(inlinea y block),coloca los elementos en linea 
+    y en bloque*/
+
+   /* display:block; coloca los elementos en forma vertical y respeta los atributos de ancho y alto*/
+
+    /*display: inline; coloca los elementos en horizontal y no respeta el ancho y alto*/
+
+    /*display:none; ayuda a ocultar los elmentos,no aparecen en nivel de html,colo apareceria el contenedor*/
+}
+/*El modelo de caja sirve para modificar el ancho,alto,margen interno y externo,asi como el borde,tambien modificar 
+la visualización de las cajas
+Esto lo hemos estado usando con margin,padding,border,width,height*/
+
